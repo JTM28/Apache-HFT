@@ -1,0 +1,4 @@
+
+{'MONGO_URI' : 'mongodb://APACHE:Pochoisgr8@stream-cluster-1-shard-00-00-zzxat.gcp.mongodb.net:27017,stream-cluster-1-shard-00-01-zzxat.gcp.mongodb.net:27017,stream-cluster-1-shard-00-02-zzxat.gcp.mongodb.net:27017/test?ssl=true&replicaSet=Stream-Cluster-1-shard-0&authSource=admin&retryWrites=true'}
+
+
