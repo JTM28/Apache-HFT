@@ -9,8 +9,11 @@ engine and probably should look into using FPGAs for processing quotes from a co
 
 # Backends
 
-| Backend | Provider | 
-|--------:|---------:|
+| Backend   | Providers | 
+|----------:|----------:|
+| Database  | MongoDB   |
+| AMQP      | RabbitMQ / ZeroMQ / Celery |
+
 
 
 
