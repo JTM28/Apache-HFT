@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html>
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<style>
+
+    #attach_btns {
+            width:100%;
+            font-size:16px;
+            color:black;
+            background:white;
+            border-radius:10px;
+            box-shadow: 2px 2px 2px black;
+            }
+
+    #row_2_btns {
+            width:100%;
+            font-size:16px;
+            color:white;
+            background:black;
+            border-radius:10px;
+            box-shadow: 2px 2px 2px black;
+    }
+
+    #i_tag {
+            margin-left:5px;
+            float:left;
+            margin-top:2px;
+            }
+
+    #node_input {
+            width:35%;
+            font-family: Times New Roman;
+            font-size: 12px;
+            height:20px;
+            }
+
+    #top_bar {
+        border: 1px solid black;
+    }
+
+    #nested_list {
+        text-align:left;
+        padding:1px;
+        margin-left: 5px;
+        font-size:12px;
+        font-family:times new roman;
+    }
+
+    #deploy_instance_card {
+        overflow-y: scroll;
+    }
+
+    #monitor_form {
+        padding:10px;
+    }
+
+    #counter {
+        width:10%;
+    }
+
+
+    #instance_dropdown {
+        width:30%;
+        height: 30px;
+        font-size:14px;
+        font-family:times new roman;
+        background:white;
+        color:black
+    }
+
+
+    #card_row_2_col_2 {
+        overflow-y: scroll;
+    }
+
+    table, th, td {
+        font-size:12px;
+        border: 1px solid black;
+        font-family: times new roman;
+        background: black;
+        width:100%;
+    }
+
+
+    #secure_btn {
+        margin-left: 10 px;
+        margin-right: 5 px;
+        width:70%;
+        text-align:center;
+        padding-left:10px;
+        font-size:18px;
+        font-family:times new roman;
+    }
+
+    .month {
+        padding: 5px 25px;
+        width: 100%;
+        background: #1abc9c;
+        text-align: center;
+    }
+
+    .month ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .month ul li {
+        color: white;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .month .prev {
+        float: left;
+        padding-top: 10px;
+    }
+
+    .month .next {
+        float: right;
+        padding-top: 10px;
+    }
+
+    .weekdays {
+        margin: 0;
+        padding: 10px 0;
+        background-color: #ddd;
+    }
+
+    .weekdays li {
+        display: inline-block;
+        width: 13.6%;
+        color: #666;
+        text-align: center;
+    }
+
+    .days {
+        padding: 5px 0;
+        background: #eee;
+        margin: 0;
+    }
+
+    .days li {
+        list-style-type: none;
+        display: inline-block;
+        width: 13.6%;
+        text-align: center;
+        margin-bottom: 5px;
+        font-size:12px;
+        color: #777;
+    }
+
+    .days li .active {
+        padding: 5px;
+        background: #1abc9c;
+        color: white !important
+    }
+
+    @media screen and (max-width:720px) {
+
+        .weekdays li, .days li {
+                                width: 13.1%;
+                                }
+    }
+
+    @media screen and (max-width: 420px) {
+        .weekdays li, .days li {
+                                width: 12.5%;
+
+                                }
+        .days li .active {
+                                padding: 2px;
+                                }
+    }
+
+    @media screen and (max-width: 290px) {
+        .weekdays li, .days li {
+                                width: 12.2%;
+                                }
+    }
+
+
+    #panel_btns_odd {
+        font-size:13px;
+        font-family:times new roman;
+        background: white;
+        width:80%;
+        text-align:left;
+        padding:3px;
+        margin-left: 2.5%;
+        margin:5px;
+    }
+
+    #panel_btns_even {
+        font-size:13px;
+        font-family:times new roman;
+        background: black;
+        color:white;
+        width:80%;
+        text-align:left;
+        padding:3px;
+        margin-left: 2.5%;
+        margin:5px;
+    }
+
+
+    #container_btns {
+        width:35%;
+        font-size:13px;
+        text-align:left;
+        background:white;
+    }
+
+
+    #kpi_table_1 {
+        background : white;
+        color: black;
+        border: 1px solid black;
+        padding:5px;
+        font-family: Times New Roman;
+        font-size: 12px;
+        width:60%;
+    }
+
+
+    #kpi_tbl_head {
+        color:white;
+        font-size:14px;
+        font-family:times new roman;
+        background:#242425;
+    }
+
+    #nt_graph {
+        padding:10px;
+        margin-top:5px;
+    }
+
+    #nt_table {
+        background: white;
+        color: black;
+        padding:5px;
+        width:90%;
+        font-family:times new roman;
+        font-size:13px;
+        border: 1px solid black;
+    }
+
+    #conn_table {
+        background:#4455AD;
+        color:white;
+        padding:6px;
+        width:100%;
+        font-family:times new roman;
+        font-size:13px;
+        border: 1px solid black;
+    }
+
+    #instance_table {
+        background:white;
+        color:black;
+        padding:6px;
+        width:60%;
+        font-family:times new roman;
+        font-size:13px;
+        text-align:left;
+        border: 1px solid black;
+    }
+
+    #bar_btns {
+        width:100%;
+        font-family: times new roman;
+        font-size:15px;
+        text-align:center;
+    }
+
+    #bar_btns:hover {
+        background-color: black;
+    }
+
+    #stats_panel_graph {
+        width:45%;
+    }
+
+    #img_stat {
+        width:100%;
+
+    }
+
+    #header_btns {
+        margin-right:10px;
+        margin-left:30px;
+    }
+
+    #cards_select {
+        width:50%;
+    }
+
+    #lbl_group {
+        font-family:times new roman;
+        font-size:18px;
+        padding:5px;
+
+    }
+
+
+</style>
+<body>
+
+
+    <!-- NAVIGATION BAR -->
+    <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+        <h1 class="w3-xxxlarge w3-text-theme">Side Navigation</h1>
+        <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+        <a href="#" class="w3-bar-item w3-button">Databases</a>
+        <a href="#" class="w3-bar-item w3-button">Neural Nets</a>
+        <a href="#" class="w3-bar-item w3-button">Profile</a>
+    </nav>
+
+    <!-- HEADER TOP OF PAGE -->
+    <header class="w3-container w3-theme w3-padding" id="header">
+        <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
+        <div class="w3-center">
+            <h1 class="w3-xxxlarge w3-animate-bottom">FinStream Cloud</h1>
+        </div>
+
+        <hr>
+        <div class="w3-bar w3-indigo">
+                <button id="header_btns" class="w3-bar-item w3-button testbtn w3-padding-16">GLOBAL RESOURCES</button>
+                <button id="header_btns" class="w3-bar-item w3-button testbtn w3-padding-16">IP MANAGER</button>
+                <button id="header_btns" class="w3-bar-item w3-button testbtn w3-padding-16">ORGANIZATION VIEW</button>
+                <button id="header_btns" class="w3-bar-item w3-button testbtn w3-padding-16">VPC PROJECTS</button>
+                <button id="header_btns" class="w3-bar-item w3-button testbtn w3-padding-16">ON-PREM VPN</button>
+        </div>
+        <hr>
+    </header>
+
+    <!-- ALL MODAL TEMPLATES -->
+    <div>
+        <!-- MODAL TEMPLATE -->
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-top">
+                <header class="w3-container w3-theme-l1">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">×</span>
+                </header>
+                <div class="w3-padding">
+                </div>
+                <footer class="w3-container w3-theme-l1">
+                </footer>
+            </div>
+        </div>
+
+        <!-- MODAL VPC -->
+        <div id="add_new_stream" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-top">
+                <header class="w3-container w3-theme-l1">
+                    <h4>Add a New Datastream</h4>
+                    <span onclick="document.getElementById('add_new_stream').style.display='none'" class="w3-button w3-display-topright">×</span>
+                </header>
+                <div class="w3-padding">
+                    <div class="w3-row">
+                        <select>
+                            <option default>Select Exchange</option>
+                        </select>
+                        &nbsp &nbsp &nbsp &nbsp
+                        <select>
+                            <option default>Stream Filters</option>
+                        </select>
+                        &nbsp &nbsp &nbsp &nbsp
+                        <button style="background:green;color:white; font-size:14px;">
+                            <i class="fa fa-save"></i>&nbspSave Stream
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+                <footer class="w3-container w3-theme-l1">
+                </footer>
+            </div>
+        </div>
+
+        <!-- MODAL MONITORS -->
+        <div id="monitors" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-top">
+                <header class="w3-container w3-theme-l1">
+                    <span onclick="document.getElementById('monitors').style.display='none'" class="w3-button w3-display-topright">×</span>
+                    <h4>Setup Server Monitors</h4>
+                </header>
+
+                <div class="w3-padding">
+                    <p>
+                        Select a monitor to apply or choose "Add All Monitors" to track all KPIs
+                    </p>
+                      <form id="monitor_form">
+
+                          <label id="monitor_cpu" class="radio-inline">
+                              <input type="radio" onclick="check('monitor_cpu')" name="optradio">&nbsp Add CPU Monitor
+                          </label>
+                          &nbsp
+                          &nbsp
+
+                          <label id="monitor_disk" class="radio-inline">
+                              <input type="radio" onclick="check('monitor_disk')" name="optradio">&nbsp Add Disk Monitor
+                          </label>
+                          &nbsp
+                          &nbsp
+
+                          <label id="monitor_net" class="radio-inline">
+                              <input type="radio" onclick="check('monitor_net')" name="optradio">&nbsp Add Network Monitor
+                          </label>
+                          &nbsp
+                          &nbsp
+
+                          <label id="monitor_all" class="radio-inline">
+                              <input type="radio" onclick="check('monitor_all')" name="optradio">&nbsp Add All Monitors
+                          </label>
+                          <br>
+                          <br>
+                          <br>
+                          <div class="throttle">
+
+                              <h4>Set Throttle Limit</h4>
+
+                              <button id="plus_count" onclick="counter(+)">
+                                  <a class="w3-button w3-circle w3-black"><i class="fa fa-plus"></i></a>
+                              </button>
+
+                              <button id="minus_count" onclick="counter(-)">
+                                  <a class="w3-button w3-circle w3-black"><i class="fa fa-minus"></i></a>
+                              </button>
+
+                              <input type="text" id="counter" value="0">
+                          </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL ADD NODE -->
+        <div id="id_add_node" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-top">
+                <header class="w3-container w3-theme-l1">
+                    <h4>Add Server Node or Service</h4>
+                    <span onclick="document.getElementById('id_add_node').style.display='none'" class="w3-button w3-display-topright">×</span>
+                </header>
+                <div class="w3-padding">
+                    <form action="/add_nodes" method="post">
+                        <div class="row">
+                            <div class="input-group input-group-icon input-group-sm">
+                                <center>
+                                    Add New Server Node
+                                </center>
+
+                                <br>
+                                &nbsp
+                                <select id="node_input" name="cloud_provider">
+                                    <option default>Provider</option>
+                                    <option value="aws">Amazon Web Services (AWS)</option>
+                                    <option value="gce"> Google Cloud (GCE)</option>
+                                </select>
+                                &nbsp
+                                {% if provider is defined %}
+                                <input id="node_input" type="text" value="{{ provider }}">
+                                {% else %}
+                                <input id="node_input" type="submit" name="select_provider" value="Select">
+                                {% endif %}
+                                <br>
+                                <br>
+                                &nbsp
+
+                                <select id="node_input" name="region">
+                                    <option default>Region</option>
+                                    {% if regions|length > 0 %}
+                                    {% for i in range(0, regions|length) %}
+                                    <option value="{{ regions[i] }}">{{ regions[i] }}</option>
+                                    {% endfor %}
+                                    {% endif %}
+                                </select>
+                                <br>
+                                <br>
+                                &nbsp
+                                <input id="node_input" type="text" name='server_name' placeholder="Server Name"/>
+                                &nbsp
+                                <input id="node_input" type="text" name='internal_ip' placeholder="Server Internal IP"/>
+                                <br>
+                                <br>
+                                &nbsp
+                                <input id="node_input" type="text" name='static_ip' placeholder="Server External IP"/>
+                                &nbsp
+                                <input id="node_input" type="text" name='cores' placeholder="CPU Cores"/>
+
+                                &nbsp
+
+                            </div>
+                            <br>
+                            &nbsp
+                            <input type="submit" name="save" value="Save Node">
+                            <br>
+                            &nbsp
+                            <h5>{{ on_add }}</h5>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- MODAL INSTANCES [JINJA2 LOOP CREATE N MODALS] -->
+        {% for k, v in servers.items() %}
+        <div id="{{ k }}" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-top">
+                <header class="w3-container w3-theme-l1">
+                    <h4>Instance: {{ k.upper() }}</h4>
+                    <span onclick="document.getElementById('{{ k }}').style.display='none'" class="w3-button w3-display-topright">×</span>
+                </header>
+                <div class="w3-padding">
+                    <table id="instance_table">
+
+                    {% for key, val in v.items() %}
+
+                            {% if val is mapping %}
+
+                                {% for _k, _v in val.items() %}
+                                <tr>
+                                    <th id="instance_table">{{ _k.upper() }}</th>
+                                    <td id="instance_table">{{ _v }}</td>
+                                </tr>
+                                {% endfor %}
+
+                            {% else %}
+                            <tr>
+                                <th id="instance_table">{{ key.upper() }}</th>
+                                <td id="instance_table">{{ val }}</td>
+                            </tr>
+
+                            {% endif %}
+                    {% endfor %}
+                    </table>
+
+
+                </div>
+                <footer class="w3-container w3-theme-l1">
+                </footer>
+            </div>
+        </div>
+        {% endfor %}
+
+        <!-- MODAL NETWORK TRAFFIC -->
+        <div id="id_network_traffic" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-top">
+                <header class="w3-container w3-theme-l1">
+                    <h4>Network Traffic Breakdown</h4>
+                    <span onclick="document.getElementById('id_network_traffic').style.display='none'" class="w3-button w3-display-topright">×</span>
+                </header>
+                <div class="w3-padding">
+
+                    <div class="w3-third">
+                        <img id=nt_graph src="{{ nt_graph[0] }}" width="100%" height="100%">
+                        <br>
+                        <center>
+                            <table id="nt_table" style="overflow-y:scroll; ">
+                                <tr>
+                                    <th style="color:white;" colspan="2">Operating Systems</th>
+                                </tr>
+                                {% for k, v in stats['nt'][0].items() %}
+                                    <tr>
+                                        <th id="nt_table">{{ k }}</th>
+                                        <td id="nt_table">{{ v }}</td>
+                                    </tr>
+                                {% endfor %}
+
+                            </table>
+                        </center>
+
+                    </div>
+                    <div class="w3-third">
+                        <img id=nt_graph src="{{ nt_graph[1] }}" width="100%" height="100%">
+                        <center>
+                            <table id="nt_table">
+                                <tr>
+                                    <th style="color:white" colspan="2">Browser Type</th>
+                                </tr>
+                                {% for k, v in stats['nt'][1].items() %}
+                                    <tr>
+                                        <th id="nt_table">{{ k }}</th>
+                                        <td id="nt_table">{{ v }}</td>
+                                    </tr>
+                                {% endfor %}
+
+                            </table>
+                        </center>
+                    </div>
+
+                    <div class="w3-third">
+                        <img id=nt_graph src="{{ nt_graph[2] }}" width="100%" height="100%">
+                        <center>
+                            <table id="nt_table">
+                                <tr>
+                                    <th style="color:white;" colspan="2">Regional</th>
+                                </tr>
+                                {% for k, v in stats['nt'][2].items() %}
+                                    <tr>
+                                        <th id="nt_table">{{ k }}</th>
+                                        <td id="nt_table">{{ v }}</td>
+                                    </tr>
+                                {% endfor %}
+
+                            </table>
+                        </center>
+                    </div>
+
+                </div>
+                <footer class="w3-container w3-theme-l1">
+                </footer>
+            </div>
+        </div>
+
+        <!-- MODAL CONNECTIONS -->
+        <div id="id_conn_profile" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-top">
+                <header class="w3-container w3-theme-l1">
+                    <h4>Connection Profiling</h4>
+                    <span onclick="document.getElementById('id_conn_profile').style.display='none'" class="w3-button w3-display-topright">×</span>
+                </header>
+
+                <div class="w3-padding">
+                    <table id="conn_table">
+                        <thead>
+                            <tr>
+                                {% for h in range(0, headers|length) %}
+                                <th id="conn_table" style="background:#2B2E3C; color:white;">{{ headers[h] }}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+
+                        <tfoot>
+
+                        {% for i in range(0, 50) %}
+                        <tr>
+                            {% for j in range(0, conn_logs[i]|length) %}
+                            <td id="conn_table">{{ conn_logs[i][j] }}</td>
+                            {% endfor %}
+                        </tr>
+                        {%endfor%}
+
+                        </tfoot>
+                        <tbody id="customer-table"></tbody>
+                    </table>
+                </div>
+                <footer class="w3-container w3-theme-l1">
+                </footer>
+            </div>
+        </div>
+
+        <!-- MODAL KPIs -->
+        <div id="id_kpi" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-top">
+                <header class="w3-container w3-theme-l1">
+                    <h4>Key Performance Indicators (KPI)</h4>
+                    <span onclick="document.getElementById('id_kpi').style.display='none'" class="w3-button w3-display-topright">×</span>
+                </header>
+                <div class="w3-padding">
+                    <div class="w3-third w3-red">
+                        <center>
+                            <table id="kpi_table_1" style="background:#E74C3C">
+                                <tr>
+                                    <th colspan="2" id="kpi_tbl_head">Speed Metrics</th>
+                                </tr>
+                                <tr>
+                                    <td id="kpi_table_1"><strong>Test</strong></td>
+                                    <td id="kpi_table_1">8%</td>
+                                </tr>
+                            </table>
+                        </center>
+                    </div>
+                    <div class="w3-third w3-blue">
+                        <center>
+                            <table id="kpi_table_1" style="background:#5DADE2">
+                                <tr>
+                                    <th colspan="2" id="kpi_tbl_head">Security Metrics</th>
+                                </tr>
+                                <tr>
+                                    <td id="kpi_table_1"><strong>Test</strong></td>
+                                    <td id="kpi_table_1">8%</td>
+                                </tr>
+                            </table>
+                        </center>
+                    </div>
+
+                    <div class="w3-third w3-green">
+
+                        <center>
+                            <table id="kpi_table_1" style="background:#229954">
+                                <tr>
+                                    <th colspan="2" id="kpi_tbl_head">Error Metrics</th>
+                                </tr>
+                                <tr>
+                                    <td id="kpi_table_1"><strong>Test</strong></td>
+                                    <td id="kpi_table_1">8%</td>
+                                </tr>
+                            </table>
+                        </center>
+
+                    </div>
+
+                </div>
+                <footer class="w3-container w3-theme-l1">
+                </footer>
+            </div>
+        </div>
+
+        <!-- MODAL INSTANCE STATS [JINJA2 LOOP CREATES 6 MODALS -->
+        {% for key in stat_plts.keys() %}
+        <div id="{{ key }}" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-top">
+                <header class="w3-container w3-theme-l1">
+                    <h4>{{ key.upper() }}</h4>
+                    <span onclick="document.getElementById('{{ key }}').style.display='none'" class="w3-button w3-display-topright">×</span>
+                </header>
+
+                <div class="w3-padding">
+
+                    {% for i in range(0, stat_plts[key]|length, 2) %}
+
+                        {% if i + 1 <= stat_plts[key]|length %}
+
+                            {% set key_2 = i + 1 %}
+
+                            {% for i in range(i, i + 2) %}
+                            <div id="{{ key }}_img_{{ i }}" class="w3-modal">
+                                <div class="w3-modal-content w3-card-4 w3-animate-top">
+                                    <header class="w3-container w3-theme-l1">
+                                        <h4>{{ key.upper() }}</h4>
+                                        <span onclick="document.getElementById('{{ key }}_img_{{ i }}').style.display='none'" class="w3-button w3-display-topright">×</span>
+                                    </header>
+                                    <div class="w3-container">
+                                        <center>
+                                            <img class=w3-image id=img_stat src="{{ stat_plts[key][i] }}" style="height:500px; width:600px; padding:10px; ">
+                                        </center>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                            <div class="w3-row" style="width:100%;">
+                                <div class="w3-card" id="stats_panel_graph" style="float:left">
+                                    <center>
+                                        <button id="{{ key }}_img_{{ i }}" onclick="document.getElementById('{{ key }}_img_{{ i }}').style.display='block'">
+                                            <img class=w3-image id=img_stat src="{{ stat_plts[key][i] }}">
+                                        </button>
+                                    </center>
+                                </div>
+                                <div class="w3-card" id="stats_panel_graph" style="float:right">
+                                    <center>
+                                        <button id="{{ key }}_img_{{ key_2 }}" onclick="document.getElementById('{{ key }}_img_{{ i }}').style.display='block'">
+                                            <img class=w3-image id=img_stat src="{{ stat_plts[key][i+1] }}">
+                                        </button>
+                                    </center>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+
+                        {% else %}
+                            <div class="w3-row">
+                                <div class="w3-card" id="stats_panel_graph">
+                                    <center>
+                                        <img class=w3-image id=img_stat src="{{ stat_plts[key][i] }}">
+                                    </center>
+                                </div>
+                            </div>
+                        {% endif %}
+
+
+                    {% endfor %}
+                </div>
+                <footer class="w3-container w3-theme-l1">
+                </footer>
+            </div>
+        </div>
+        {% endfor %}
+
+
+        <!-- MODAL NEW PROJECT -->
+        <div id="new_project" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-top">
+                <header class="w3-container w3-theme-l1">
+                    <h4>Create New Project Group</h4>
+                    <span onclick="document.getElementById('new_project').style.display='none'" class="w3-button w3-display-topright">×</span>
+                </header>
+                <div class="w3-padding">
+
+                    <h5>Create Project Grouping Rules</h5>
+                    <div class="w3-row">
+                        <label id="lbl_group" for="rad_1">Create Unmanaged Group</label>
+                        <input id="rad_1" type="radio">
+                        &nbsp &nbsp &nbsp &nbsp
+
+                        <label id="lbl_group" for="rad_2">Group by Location</label>
+                        <input id="rad_2" type="radio">
+                        &nbsp &nbsp &nbsp &nbsp
+
+                        <label id="lbl_group" for="rad_3">Group by Engine</label>
+                        <input id="rad_3" type="radio">
+                    </div>
+                </div>
+                <footer class="w3-container w3-theme-l1">
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOP BAR STATUS COLORS -->
+    <div class="w3-row">
+        <div id="top_bar" class="w3-col w3-container m2 w3-red">
+            <button id="bar_btns" class="w3-button w3-red" onclick="document.getElementById('cpu').style.display='block'">
+                VMs
+            </button>
+        </div>
+
+        <div id="top_bar" class="w3-col w3-container m2 w3-green">
+            <button id="bar_btns" class="w3-button w3-green" onclick="document.getElementById('disk').style.display='block'">
+                ENGINES
+            </button>
+        </div>
+
+        <div id="top_bar" class="w3-col w3-container m2 w3-green">
+            <button id="bar_btns" class="w3-button w3-green" onclick="document.getElementById('mem').style.display='block'">
+                STREAMS
+            </button>
+        </div>
+
+        <div id="top_bar" class="w3-col w3-container m2 w3-red">
+            <button id="bar_btns" class="w3-button w3-red" onclick="document.getElementById('net').style.display='block'">
+                NETWORK
+            </button>
+        </div>
+
+        <div id="top_bar" class="w3-col w3-container m2 w3-yellow">
+            <button id="bar_btns" class="w3-button w3-yellow">SPEED</button>
+        </div>
+
+        <div id="top_bar" class="w3-col w3-container m2 w3-red">
+            <button id="bar_btns" class="w3-button w3-red">FAILOVERS</button>
+        </div>
+    </div>
+
+    <!-- TOP 3 CARDS [ ATTACH INSTANCE + DEPLOYED INSTANCE + DEVELOPMENT CARDS ] -->
+    <div class="w3-row-padding w3-center w3-margin-top">
+
+        <!-- ATTACH SERVER CARD TOP -->
+        <div class="w3-third">
+            <div class="w3-card w3-container" style="min-height:400px;">
+                <h3>STREAMING</h3>
+                <br>
+                <br>
+                <i class="fa fa-bolt w3-margin-bottom w3-text-theme" style="font-size:40px;"></i>
+
+                <div class="w3-panel">
+                    <button class="btn" id="attach_btns" onclick="document.getElementById('add_new_stream').style.display='block'">
+                        <i class="fa fa-code" id="i_tag"></i>&nbsp&nbsp&nbspADD NEW STREAM
+                    </button>
+                </div>
+
+                <div class="w3-panel">
+                    <button class="btn" id="attach_btns">
+                        <i class="fa fa-server" id="i_tag"></i>&nbsp&nbsp&nbspADD NEW EVENT
+                    </button>
+                </div>
+
+                <div class="w3-panel">
+                    <button class="btn" id="attach_btns">
+                        <i class="fa fa-envelope-square" id="i_tag"></i>&nbsp&nbsp&nbspADD LISTENER NODE
+                    </button>
+                </div>
+
+                <div class="w3-panel">
+                    <button class="btn" id="attach_btns">
+                        <i class="fa fa-file" id="i_tag"></i>&nbsp&nbsp&nbspFile Server
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- DEPLOYED INSTANCES CARD TOP -->
+        <div class="w3-third">
+            <div class="w3-card w3-container" style="min-height:400px" id="deploy_instance_card">
+                <h3>RESOURCES</h3>
+                <br>
+                <br>
+                <i class="fa fa-rocket w3-margin-bottom w3-text-theme" style="font-size:40px"></i>
+
+                <div class="w3-panel">
+                    <button class="btn" id="attach_btns">
+                        <i class="fa fa-code" id="i_tag"></i>&nbsp&nbsp&nbspWALLET MANAGER
+                    </button>
+                </div>
+
+                <div class="w3-panel">
+                    <button class="btn" id="attach_btns">
+                        <i class="fa fa-server" id="i_tag"></i>&nbsp&nbsp&nbspTRADE VIEWER
+                    </button>
+                </div>
+
+                <div class="w3-panel">
+                    <button class="btn" id="attach_btns">
+                        <i class="fa fa-envelope-square" id="i_tag"></i>&nbsp&nbsp&nbspPROFIT VIEWER
+                    </button>
+                </div>
+
+                <div class="w3-panel">
+                    <button class="btn" id="attach_btns">
+                        <i class="fa fa-file" id="i_tag"></i>&nbsp&nbsp&nbspEVENT DRIVER
+                    </button>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        <!-- DEVELOPMENT CARD TOP -->
+        <div class="w3-third">
+            <div class="w3-card w3-container" style="min-height:400px">
+                <h3>DEVELOPMENT</h3>
+                <select id="cards_select">
+                    <option default>Add-Ons</option>
+                </select>
+                <br>
+                <br>
+                <i class="fa fa-share-square w3-margin-bottom w3-text-theme" style="font-size:40px"></i>
+
+                <div class="w3-panel">
+                    <button class="btn" id="attach_btns">
+                        <i class="fa fa-rocket" id="i_tag"></i>&nbsp&nbsp&nbspDeploy New Service
+                    </button>
+                </div>
+
+                <div class="w3-panel">
+                    <button class="btn" id="attach_btns">
+                        <i class="fa fa-circle-o-notch" id="i_tag"></i>&nbsp&nbsp&nbspCD/CI Services
+                    </button>
+                </div>
+
+                <div class="w3-panel">
+                    <button class="btn" id="attach_btns">
+                        <i class="fa fa-paper-plane" id="i_tag"></i>&nbsp&nbsp&nbspCreate Data Pipeline
+                    </button>
+                </div>
+
+                <div class="w3-panel">
+                    <button class="btn" id="attach_btns" onclick="document.getElementById('monitors').style.display='block'">
+                        <i class="fa fa-paper-plane" id="i_tag"></i>&nbsp&nbsp&nbspSetup Server Monitors
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ALL CLOUD INTERACTIONS -->
+    <div class="w3-row-padding">
+        <div class="w3-card">
+            <div class="w3-container w3-red">
+
+                <center>
+                    <h3>
+                        INTERACTIVE TRADING PLATFORM
+                    </h3>
+
+                </center>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- INTERACTIVE CLOUD ENVIRONMENT -->
+    <div class="w3-row-padding">
+        <!-- CLUSTER MANAGER -->
+        <div class="w3-half">
+            <div class="w3-card white">
+                <div class="w3-container w3-black">
+                    <button style="float:right; margin-right:1px; margin-top:15px; width:15%; font-size:10px;"
+                        onclick="document.getElementById('modal_vp').style.display='block'">Help</button>
+                    <button style="float:left; margin-left:1px; margin-top:15px; width:15%; font-size:10px;">Hide</button>
+
+                    <center>
+                        <h3>HISTORICAL ANALYSIS</h3>
+                    </center>
+                </div>
+                <div class="w3-container">
+                    <br>
+                    <div class="w3-half">
+                        <center>
+                            <button id="panel_btns_odd" onclick="document.getElementById('new_project').style.display='block'">
+                                <i class="fa fa-server" id="i_tag"></i>
+                                &nbsp
+                                &nbsp
+                                BACKTESTING ENGINE
+                            </button>
+
+                            <button id="panel_btns_even" onclick="document.getElementById('id_add_node').style.display='block'">
+                                <i class="fa fa-lock" id="i_tag"></i>
+                                &nbsp
+                                &nbsp
+                                ANALYSIS ENGINE
+                            </button>
+
+                            <button id="panel_btns_odd" onclick="document.getElementById('id_add_node').style.display='block'">
+                                <i class="fa fa-globe" id="i_tag"></i>
+                                &nbsp
+                                &nbsp
+                                CORRELATION BUILDER
+                            </button>
+                        </center>
+                    </div>
+
+                    <div class="w3-half">
+                        <center>
+                            <button id="panel_btns_odd" onclick="document.getElementById('id_add_node').style.display='block'">
+                                <i class="fa fa-code-fork" id="i_tag"></i>
+                                &nbsp
+                                &nbsp
+                                ETL PIPELINE
+                            </button>
+
+                            <button id="panel_btns_even" onclick="document.getElementById('id_add_node').style.display='block'">
+                                <i class="fa fa-globe" id="i_tag"></i>
+                                &nbsp
+                                &nbsp
+                                GRAPHING ENGINE
+                            </button>
+
+                            <button id="panel_btns_odd" onclick="document.getElementById('id_add_node').style.display='block'">
+                                <i class="fa fa-exclamation-circle" id="i_tag"></i>
+                                &nbsp
+                                &nbsp
+                                MORE ENGINES
+                            </button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-container w3-red w3-large">
+                    <span class="w3-right">&nbsp</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- NETWORKS & VPC -->
+        <div class="w3-half">
+            <div class="w3-card white">
+                <div class="w3-container w3-theme">
+                    <button style="float:right; margin-right:1px; margin-top:15px; width:15%; font-size:10px;"
+                    onclick="document.getElementById('modal_vp').style.display='block'">Help</button>
+                    <button style="float:left; margin-left:1px; margin-top:15px; width:15%; font-size:10px;">Hide</button>
+
+                    <center>
+                        <h3>LIVE TRADING</h3>
+                    </center>
+                </div>
+
+                <div class="w3-container">
+                    <br>
+                    <div class="w3-half">
+                        <center>
+                            <button id="panel_btns_odd" onclick="document.getElementById('id_network_traffic').style.display='block'">
+                                <i class="fa fa-car" id="i_tag"></i>
+                                &nbsp
+                                &nbsp
+                                DEPLOY STRATEGY
+                            </button>
+
+                            <button id="panel_btns_even" onclick="document.getElementById('id_view_instance').style.display='block'">
+                                <i class="fa fa-pie-chart" id="i_tag"></i>
+                                &nbsp
+                                &nbsp
+                                DEPLOY MM BOT
+                            </button>
+
+                            <button id="panel_btns_odd" onclick="document.getElementById('id_kpi').style.display='block'">
+                                <i class="fa fa-bar-chart" id="i_tag"></i>
+                                &nbsp
+                                &nbsp
+                                DEPLOY HEDGE BOT
+                            </button>
+
+                        </center>
+                    </div>
+
+                    <div class="w3-half">
+                        <center>
+
+                            <button id="panel_btns_odd" onclick="document.getElementById('id_add_node').style.display='block'">
+                                <i class="fa fa-cloud" id="i_tag"></i>
+                                &nbsp
+                                &nbsp
+                                LATENCY TESTER
+                            </button>
+
+                            <br>
+
+                            <button id="panel_btns_even" onclick="document.getElementById('id_view_instance').style.display='block'">
+                                <i class="fa fa-eye" id="i_tag"></i>
+                                &nbsp
+                                &nbsp
+                                DISTRIBUTED SETUP
+                            </button>
+
+                            <br>
+
+                            <button id="panel_btns_odd" onclick="document.getElementById('id_view_instance').style.display='block'">
+                                <i class="fa fa-pencil" id="i_tag"></i>
+                                &nbsp
+                                &nbsp
+                                CHANGE NODE TYPE
+                            </button>
+
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="w3-container w3-red w3-large">
+                    <span class="w3-right">&nbsp</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="w3-container">
+        <div class="w3-responsive w3-card-4">
+
+        </div>
+        <hr>
+    </div>
+
+    <div class="w3-row-padding">
+
+        <!-- CALENDAR -->
+        <div class="w3-half">
+            <center>
+                <h4>
+                    EVENT CALENDAR
+                </h4>
+            </center>
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="well">
+
+                        <div class="month">
+                            <ul>
+                                <li class="prev">&#10094;</li>
+                                <li class="next">&#10095;</li>
+                                <li>August<br><span style="font-size:18px">2017</span></li>
+                            </ul>
+                        </div>
+                        <ul class="weekdays">
+                                            <li>Mo</li>
+                                            <li>Tu</li>
+                                            <li>We</li>
+                                            <li>Th</li>
+                                            <li>Fr</li>
+                                            <li>Sa</li>
+                                            <li>Su</li>
+                                        </ul>
+
+                        <ul class="days">
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li>3</li>
+                                            <li>4</li>
+                                            <li>5</li>
+                                            <li>6</li>
+                                            <li>7</li>
+                                            <li>8</li>
+                                            <li>9</li>
+                                            <li>11</li>
+                                            <li>12</li>
+                                            <li>13</li>
+                                            <li>14</li>
+                                            <li>15</li>
+                                            <li>16</li>
+                                            <li>17</li>
+                                            <li>18</li>
+                                            <li>19</li>
+                                            <li>20</li>
+                                            <li>21</li>
+                                            <li>22</li>
+                                            <li>23</li>
+                                            <li>24</li>
+                                            <li>25</li>
+                                            <li>26</li>
+                                            <li>27</li>
+                                            <li>28</li>
+                                            <li>29</li>
+                                            <li>30</li>
+                                            <li>31</li>
+                                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- MAP -->
+        <div class="w3-half">
+            <center>
+                <h4>
+                    LIVE MAP
+                </h4>
+            </center>
+            <div id="map-container-google-1" class="z-depth-1-half map-container">
+                <iframe src="https://maps.google.com/maps?q=singapore&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                        style="border:0" allowfullscreen height="265px" width="100%"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROGRESS BARS -->
+    <hr>
+    <h2 class="w3-center">
+        ESTIMATED TOTAL USAGE
+    </h2>
+
+    <div class="w3-container">
+        <div class="w3-light-gray">
+            <div id="myBar" class="w3-center w3-padding w3-theme" style="width:5%">5%</div>
+        </div>
+    </div>
+
+    <div class="w3-container">
+        <hr>
+        <h2 class="w3-center">
+            ADVANCED VPC
+        </h2>
+
+        <div class="w3-border">
+            <div class="w3-bar w3-theme">
+                <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'London')">LOAD BALANCING</button>
+                <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Paris')">FAIL-OVER ROUTES</button>
+                <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Tokyo')">REDUNDANCY</button>
+            </div>
+
+        </div>
+
+        <hr>
+        <h2 class="w3-center">
+            Platform Management
+        </h2>
+
+        <div class="w3-center">
+            <br>
+            <a class="w3-button w3-theme">API MANAGER</a>
+            <a class="w3-button w3-theme">Platform Interactions</a>
+            <a class="w3-button w3-theme">REAL-TIME UPDATES</a>
+            <br>
+            <br>
+            <a class="w3-button w3-circle w3-large w3-black"><i class="fa fa-plus"></i></a>
+            <a class="w3-button w3-circle w3-large w3-theme"><i class="fa fa-plus"></i></a>
+            <a class="w3-button w3-circle w3-large w3-card-4"><i class="fa fa-plus"></i></a>
+        </div>
+
+        <br>
+        <div class="w3-center">
+            <div class="w3-dropdown-hover">
+                <button class="w3-button w3-theme">Dropdown <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-border">
+                    <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                    <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-blue-grey">
+        <h5>
+            Nucleus Cluster
+        </h5>
+        <p class="w3-opacity" style="font-size:13px;">
+            The Nucleus Platform is currently under development. To help speed up the development process and also
+            quickly fix any errors that may occur; we ask that you please report any and all issues / concerns /
+            future ideas and anything else you may think of while using your Nucleus Cluster <a href="#">Here</a>
+        </p>
+
+        <p style="font-size:10px;">
+            This platform is not an endorsement for any cloud or database provider. The providers used by default
+            are simply the best fit for the current situation.
+
+        </p>
+    </footer>
+
+<!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+<script>
+
+    // MONITOR RADIO BUTTONS
+    function check(id) {
+
+      if (document.getElementById(id).checked) {
+          document.getElementById(id).checked = false;
+          }
+      else {
+          document.getElementById(id).checked = true;
+          }
+    }
+
+    function counter(action) {
+        var count = document.getElementyById(counter).value;
+        var action = action;
+
+        if (action === '+') {
+            count.value += 1;
+            }
+
+        else {
+            count.value -= 1;
+        }
+    }
+
+    var socket = new WebSocket('127.0.0.1:10000');
+
+    socket.addEventListener('open', function (event) {
+    socket.send('Hello Server!');
+    });
+
+    function get_instance(inst) {
+        socket.on('any event', function(msg) {
+            console.log(msg);})
+    }
+
+
+
+
+
+// Side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "100%";
+  x.style.fontSize = "40px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+    activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+// Accordions
+function myAccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Slideshows
+var slideIndex = 1;
+
+function plusDivs(n) {
+  slideIndex = slideIndex + n;
+  showDivs(slideIndex);
+}
+
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+
+showDivs(1);
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");
+  var width = 5;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + '%';
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+</script>
+
+</body>
+</html>
